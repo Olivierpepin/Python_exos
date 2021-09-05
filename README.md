@@ -1,2 +1,2 @@
-Repo accueillant les differents cours Python
+Repo accueillant les differents cours Python.
 
