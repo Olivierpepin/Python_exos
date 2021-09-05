@@ -4,86 +4,124 @@
 
 ## Exercice 1 - Level 1
 
-# Iterate 0 to 10 using for loop, do the same using while loop.
+# 1 Iterate 0 to 10 using for loop, do the same using while loop.
 
-i = 1
+i = 0
 while i <= 10:
     print(i)
     i += 1
 
-# With for loop
+# With "for" loop
 
 for i in range(0,11):
     print(i)
 
 
-
-# Exercice 1.2
-for i in range(10,-1,-1):
-    print(i)
+# 2 Iterate 10 to 0 using for loop, do the same using while loop.
 
 i=10
 while i >= 0:
     print(i)
     i -= 1
 
-# Exercice 1.3
+# With "for" loop
+
+for i in range(10,-1,-1): # Begin / End (-1) / Step
+    print(i)
+
+
+# 3 Write a loop that makes seven calls to print(). See md for the output.
+
+## For further informations about Nested loops : 
+## https://pynative.com/python-nested-loops/#:~:text=Loop%20in%20Python%3F-,What%20is%20a%20Nested%20Loop%20in%20Python%3F,while%20loop%20and%20vice%20versa.
+
+for i in range (1,9):
+    print(i*'# ')
+
+# With Outer and Inner loops
 
 n = int(input("Nombre de lignes : "))  
 for i in range(0, n):   
     for j in range(0, i + 1):  
-        print('# ', end = '')           
-    print()  
-
-for i in range (1,8):
-    print(i*'#')
-
-# Exercice 1.4
-
-cote = int(input("Nombre de lignes : "))
-for i in range(cote):
-    for i in range(cote):
         print('# ', end = '')
     print()
 
-# Exercice 1.5
+
+
+# 4 Use nested loops to create the following. See md for the output.
+
+n = int(input("Nombre de lignes : "))
+for i in range(n):
+    for i in range(n):
+        print('# ', end = '')
+    print()
+
+
+# 5 Print the following pattern. See md for the output.
 
 for i in range(0,11):
     print(i, ' x ', i, ' = ', i*i)
 
-# Exercice 1.6
+
+# 6 Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] 
+# using a for loop and print out the items.
 
 list = ['Python','Numpy','Pandas','Django','Flask']
+
 for i in list:
     print(i)
 
-# Exercice 1.7
+# While loop. The lenght is needed. 
+
+list = ['Python','Numpy','Pandas','Django','Flask']
+
+lenght = len(list)
+i = 0
+
+while i < lenght:
+    print(list[i])
+    i += 1
+
+
+# 7 Use for loop to iterate from 0 to 100 and print only even numbers
+
+# Utilisation d'un pas
 
 for i in range(0,101,2):
     print(i)
 
+
+# La condition est l'affichage des chiffres paires. Il est donc pas necessaire d'interroger les chiffres impaires.
+# Nous pouvons nous limiter à un "if". L'absence de check sur les impairs pourrait occasionner des problèmes
+# des cas complexes.
+
 for i in range(0,101):
-    if (i%2) == 0:
+    if (i%2) == 0: print(i)
+
+
+# 8 Use for loop to iterate from 0 to 100 and print only odd numbers
+
+for i in range(0,101):
+    if (i%2) != 0: # Different de 0
         print(i)
-    else:
-        continue
 
-# Exercice 1.8
+# one line
 
 for i in range(0,101):
-    if (i%2) != 0:
-        print(i)
-    else:
-        continue
+    if (i%2) != 0: print(i)
 
-# Exercice 2.1
 
-somme = 0
+## Exercice 2 - Level 2
+
+# 1 Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+sum = 0
 for i in range(0,101):
-    somme += i
-print('La somme est egale a ', somme)
+    sum += i
+print(sum)
 
-# Exercice 2.2
+
+# 1.1 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 
 somme_even = 0
 somme_odd = 0
@@ -95,48 +133,125 @@ for i in range(0,101):
 print('La somme des nombres paires est', somme_even)
 print('La somme des nombres impaires est', somme_odd)
 
-# Exercice 3.1
 
-countries=['Afghanistan','Albania','Algeria','Andorra','Angola','AntiguaandBarbuda','Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','BosniaandHerzegovina','Botswana','Brazil','Brunei','Bulgaria','BurkinaFaso','Burundi','Cambodia','Cameroon','Canada','CapeVerde','CentralAfricanRepublic','Chad','Chile','China','Colombi','Comoros','Congo(Brazzaville)','Congo','CostaRica',"Coted'Ivoire",'Croatia','Cuba','Cyprus','CzechRepublic','Denmark','Djibouti','Dominica','DominicanRepublic','EastTimor(TimorTimur)','Ecuador','Egypt','ElSalvador','EquatorialGuinea','Eritrea','Estonia','Ethiopia','Fiji','Finland','France','Gabon','Gambia,The','Georgia','Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana','Haiti','Honduras','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kiribati','Korea,North','Korea,South','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg','Macedonia','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','MarshallIslands','Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','NewZealand','Nicaragua','Niger','Nigeria','Norway','Oman','Pakistan','Palau','Panama','PapuaNewGuinea','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','SaintKittsandNevis','SaintLucia','SaintVincent','Samoa','SanMarino','SaoTomeandPrincipe','SaudiArabia','Senegal','SerbiaandMontenegro','Seychelles','SierraLeone','Singapore','Slovakia','Slovenia','SolomonIslands','Somalia','SouthAfrica','Spain','SriLanka','Sudan','Suriname','Swaziland','Sweden','Switzerland','Syria','Taiwan','Tajikistan','Tanzania','Thailand','Togo','Tonga','TrinidadandTobago','Tunisia','Turkey','Turkmenistan','Tuvalu','Uganda','Ukraine','UnitedArabEmirates','UnitedKingdom','UnitedStates','Uruguay','Uzbekistan','Vanuatu','VaticanCity','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe',]
+# Exercice 3 - Level 3
+
+# 1 Go to the data folder and use the countries.py file. 
+# Loop through the countries and extract all the countries containing the word land.
+
+# import d'un fichier
+
+import countries
+
+from countries import countries_list # "*" pour import all comme SQL
 
 newlist = []
-for country in countries:
+
+for country in countries_list:
     if 'land' in country:
         newlist.append(country)
 print(newlist)
 
-import re
-r = re.compile(".*land.*")
-newlist = list(filter(r.match, countries))
-print(newlist)
 
-# Exercice 3.2
+''' Voir pour une utilisation avec compile()
+
+import countries
+
+from countries import *
+
+r = countries.compile(".*land.*")
+newlist = list(filter(r.match, countries))
+print(newlist)'''
+
+
+# 2 This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+
+# On va récuperer indivuduellement chaque element de l'array en partant du dernier "[::-1]" et chaque
+# element va être ajouté individuellement en incrémentant l'index.
 
 fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.reverse()
-print(fruits)
 
 newfruit = []
 for i in fruits[::-1]:
-    newfruit.append(i)
+    newfruit.append(i) 
 print(newfruit)
 
-# Exercice 3.3
-# i
+# L'array va être lu dans le sens de l'index mais chaque entrées va être poussées de +1 par une nouvelle entrée
+# car insert() attribura à chaque nouvelle entrée l'index 0
 
-from countries_data import *
+fruits=['banana', 'orange', 'mango', 'lemon']
+
+rev_fruits=[]
+for fruit in fruits:
+    rev_fruits.insert(0,fruit)
+print (rev_fruits)
+
+# Avec la fonction reverse
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+
+fruits.reverse()
+print(fruits)
+
+
+# Exercice 3 Go to the data folder and use the countries_data.py file
+
+# i What are the total number of languages in the data
+
+# Le but est de récupérer l'ensemble des langages dans contriesdata et de les ajouter dans
+# une nouvelle liste. Une somme des index est ensuite imprimé afin de supprimer les doublons.
+
+import countriesdata
+
+from countriesdata import *
+
 liste_langues = []
-for country in countries_data:
+for country in countriesdata:
     liste_langues.extend(country["languages"])
 
 print(len(set(liste_langues)))
 
-# ii
+# ii Find the ten most spoken languages from the data
 
+import countriesdata
 
-# iii
+from countriesdata import *
 
-from countries_data import *
+LangList={}
+# on parcours les pays
+for cntData in countriesdata:
+	DictLanguages = cntData['languages']
+	# on parcours les langages du pays
+	for Lang in DictLanguages:
+		# on parcours les langues présentes
+		bPresente=False
+		for LangTest in LangList:
+			if LangTest == Lang:
+				bPresente=True
+				LangList[LangTest] = LangList[LangTest]+1
+		if bPresente == False: 
+			LangList[Lang] = 1
+#LangList.sort()
+sorted_Lang = dict( sorted(LangList.items(),
+			key=lambda item: item[1],
+			reverse=True))
+
+max=10
+for Lang in sorted_Lang:
+	print (Lang)
+	max=max-1
+	if max == 0:
+		break
+
+# iii Find the 10 most populated countries in the world
+
+# A travailler. Manque sort par pays et population
+
+'''import countriesdata
+
+from countriesdata import *
 dict = {}
-for country in countries_data:
+for country in countriesdata:
     dict.append(country["name"],country["population"])
+
+print(dict)'''
