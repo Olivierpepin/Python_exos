@@ -7,8 +7,6 @@
 dog = {}
 print(dog)
 
-
-
 # 2 Add name, color, breed, legs, age to the dog dictionary
 
 dog = {"name":"", "color":"", "breed":"", "legs":"", "age":""}
