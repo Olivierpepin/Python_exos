@@ -9,6 +9,7 @@
 
 
 reponse=list()
+
 for x in range(2000, 3201):
     # Numbers that 7 divisable 7 but not 5
     if x % 7 == 0 and x % 5 != 0:
