@@ -33,7 +33,7 @@ for i in range(10,-1,-1): # Begin / End (-1) / Step
 # 3 Write a loop that makes seven calls to print(). See md for the output.
 
 ## For further informations about Nested loops : 
-## https://pynative.com/python-nested-loops/#:~:text=Loop%20in%20Python%3F-,What%20is%20a%20Nested%20Loop%20in%20Python%3F,while%20loop%20and%20vice%20versa.
+## https://pynative.com/python-nested-loops/#:~:text=Loop%20in%20Python%3F-,What%20is%20a%20Nested%20Loop%20in%20Python%3F,while%20loop%20and%20vice%20versa
 
 for i in range (1,9):
     print(i*'# ')
@@ -45,7 +45,6 @@ for i in range(0, n):
     for j in range(0, i + 1):  
         print('# ', end = '')
     print()
-
 
 
 # 4 Use nested loops to create the following. See md for the output.
@@ -63,7 +62,7 @@ for i in range(0,11):
     print(i, ' x ', i, ' = ', i*i)
 
 
-# 6 Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] 
+# 6 Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask']
 # using a for loop and print out the items.
 
 list = ['Python','Numpy','Pandas','Django','Flask']
