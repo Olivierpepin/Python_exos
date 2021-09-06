@@ -205,7 +205,7 @@ import countriesdata
 from countriesdata import *
 
 liste_langues = []
-for country in countriesdata:
+for country in countriesdata_list:
     liste_langues.extend(country["languages"])
 
 print(len(set(liste_langues)))
@@ -218,7 +218,7 @@ from countriesdata import *
 
 LangList={}
 # on parcours les pays
-for cntData in countriesdata:
+for cntData in countriesdata_list:
 	DictLanguages = cntData['languages']
 	# on parcours les langages du pays
 	for Lang in DictLanguages:
@@ -250,7 +250,7 @@ for Lang in sorted_Lang:
 
 from countriesdata import *
 dict = {}
-for country in countriesdata:
+for country in countriesdata_list:
     dict.append(country["name"],country["population"])
 
 print(dict)'''
