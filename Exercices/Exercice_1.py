@@ -70,3 +70,4 @@ elif a < b:
     print(str(a), 'est plus petit que', str(b))
 else:
     print(str(a), 'est egal a', str(b))
+
