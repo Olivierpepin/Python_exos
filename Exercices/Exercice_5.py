@@ -392,67 +392,127 @@ is_empty("")
 # 3 Write different functions which take lists. 
 # They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
 
+# Reminder Mean, Median, Mode : https://tinyurl.com/3apdsvfe
+
 # Import librairie statistics
 
 import statistics
 
-# mean
+# mean (average)
 
-Test_list = [1,3,5,27,158]
+test_list = [1,3,5,27,158]
+
+def calculate_mean(list):
+    x = print(sum(list)/len(list))
+    return x
+
+calculate_mean(test_list)
+
+# With statistics
+
+import statistics
+
+test_list = [1,3,5,27,158]
 
 def calculate_mean(list):
     x = statistics.mean(list)
     return x
 
-calculate_mean(Test_list)
+calculate_mean(test_list)
+
 
 # median
 
+test_list = [1,3,5,27,158]
+
+def calculate_median(list):
+    def calculate_median(list):
+        list.sort()
+    if len(list)%2 == 0:
+        median1 = list[len(list) // 2]
+        median2 = list[(len(list) // 2) -1]
+        median = (median1 + median2) / 2
+    else:
+        median = list[len(list)//2]
+    return median
+
+calculate_median(test_list)
+
+# With statistics
+
 import statistics
 
-Test_list = [1,3,5,27,158]
+test_list = [1,3,5,27,158]
 
 def calculate_median(list):
     x = statistics.median(list)
     return x
 
-calculate_median(Test_list)
+calculate_median(test_list)
 
-import statistics
 
 # mode 
 
-Test_list = [1,3,5,27,158,3,3]
+test_list = [1,3,5,27,158,3,3]
 
 def calculate_mode(list):
     x = statistics.mode(list)
     return x
 
-calculate_mode(Test_list)
+calculate_mode(test_list)
 
 # range
 
-Test_list = [1,3,5,27,158,25]
+test_list = [1,3,5,27,158,25]
 
 def calculate_range(list):
-    x = len(list)
-    return x
+    min_value = min(list)
+    max_value = max(list)
+    print('Range :', min_value, 'a', max_value)
 
-calculate_range(Test_list)
+calculate_range(test_list)
 
-# variance
+# variance A verifier
+
+test_list = [1,3,5,27,158,25]
+
+def calculate_variance(list):
+    moy = sum(list) / len(list)
+    v = 0
+    for i in range(0,len(list)):
+        v = v + (list[i] - moy)**2
+    return (v/len(list))
+
+calculate_variance(test_list)
+
+# variance meme resultat
+
+test_list = [1,3,5,27,158,25]
+
+def calculate_variance(list):
+    moy = sum(list) / len(list)
+    var = sum([(x - moy) ** 2 for x in list]) / len(list)
+    return var
+
+calculate_variance(test_list)
+
+# with statistics (pas le même resultat A voir)
 
 import statistics
 
-Test_list = [1,3,5,27,158,25]
+test_list = [1,3,5,27,158,25]
 
 def calculate_variance(list):
     x = statistics.variance(list)
     return x
 
-calculate_variance(Test_list)
+calculate_variance(test_list)
 
 # standard deviation
+# The standard deviation is the square root of the average of the squared deviations from the mean,
+# i.e., std = sqrt(mean(x)), where x = abs(a - a.mean())**2.
+
+# With statistics
 
 import statistics
 
@@ -460,6 +520,16 @@ Test_list = [1,3,5,27,158,25]
 
 def calculate_std(list):
     x = statistics.stdev(list)
+    return x
+
+calculate_std(Test_list)
+
+import numpy
+
+Test_list = [1,3,5,27,158,25]
+
+def calculate_std(list):
+    x = numpy.std(list)
     return x
 
 calculate_std(Test_list)
