@@ -16,3 +16,5 @@
 # Avantages POO : - meilleur organisation code
 #               : - réutilisation possible
 #               : - beaucoup plus facilement maintenable en travail collaboratif
+
+# Par convention : une classe démarre par une majuscule 
