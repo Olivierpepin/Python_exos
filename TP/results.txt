@@ -1,0 +1,5 @@
+Result Obama : 
+Occurences de IT : 18
+Number de Paragraphs: 107
+Number of Lines : 66
+Number of Words : 2347
